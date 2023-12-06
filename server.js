@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const port = 3000;
 const schema = require("./schema.json");
+const relationships = require("./relationships.json");
 
 const collections = [];
 
@@ -21,6 +22,10 @@ app
     collections.push({ collection: collectionName, model: modelId });
     res.send(201);
   });
+
+app.get("/lineage", (req, res) => {
+  res.send(relationships);
+});
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);

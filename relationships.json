@@ -1,0 +1,38 @@
+{
+    "Orders": [
+        "Shipping",
+        "OrderDetails",
+        "Payments",
+        "Customers"
+    ],
+    "Customers": [
+        "Orders"
+    ],
+    "OrderDetails": [
+        "Products",
+        "Payments",
+        "Orders"
+    ],
+    "Products": [
+        "Reviews",
+        "Inventory",
+        "OrderDetails",
+        "Categories"
+    ],
+    "Categories": [
+        "Products"
+    ],
+    "Reviews": [
+        "Products"
+    ],
+    "Shipping": [
+        "Orders"
+    ],
+    "Payments": [
+        "OrderDetails",
+        "Orders"
+    ],
+    "Inventory": [
+        "Products"
+    ]
+}
